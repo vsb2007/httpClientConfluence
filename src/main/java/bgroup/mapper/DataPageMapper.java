@@ -12,7 +12,7 @@ import java.util.List;
 public interface DataPageMapper {
 
     @Insert("insert into page(page_id,page_header,page_date_create) values(#{pageId},#{pageHeader},#{pageDateCreate})")
-    @SelectKey(statement = " SELECT LAST_INSERT_ID()", keyProperty = "id",before = false, resultType = Integer.class)
+    @SelectKey(statement = " SELECT LAST_INSERT_ID()", keyProperty = "id", before = false, resultType = Integer.class)
     void insertDataPage(DataPage dataPage);
 
     @Results({
